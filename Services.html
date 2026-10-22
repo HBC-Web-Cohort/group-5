@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | BrightSmile Dental Clinic</title>
+
+    <style>
+        /* ---------- GENERAL STYLES ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5faff;
+            color: #7040A0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 12px rgba(0, 55, 120, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #0869d9;
+            font-size: 25px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            display: block;
+            color: #17365f;
+            font-size: 13px;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #17365f;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #0875ed;
+        }
+
+        .header-btn,
+        .btn {
+            display: inline-block;
+            background-color: #7040A0;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .header-btn:hover,
+        .btn:hover {
+            background-color: #0757b5;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- PAGE INTRODUCTION ---------- */
+        .page-intro {
+            text-align: center;
+            padding: 65px 20px 45px;
+            background: linear-gradient(135deg, #e3f2ff, #ffffff);
+        }
+
+        .small-title {
+            color: #0875ed;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .page-intro h1 {
+            color: #123568;
+            font-size: 42px;
+            line-height: 1.2;
+            margin: 12px 0;
+        }
+
+        .page-intro h1 span {
+            color: #0875ed;
+        }
+
+        .page-intro p {
+            color: #526b8b;
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        /* ---------- SERVICES SECTION ---------- */
+        .services-section {
+            padding: 55px 0 65px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-size: 30px;
+            margin: 8px 0;
+        }
+
+        .section-heading p {
+            color: #627792;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+            border: 1px solid #e0edfa;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(24, 83, 145, 0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(24, 83, 145, 0.13);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .service-number {
+            display: inline-block;
+            color: #0875ed;
+            background-color: #e8f3ff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-content h3 {
+            color: #123568;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #61748c;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .learn-more {
+            color: #0875ed;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .learn-more:hover {
+            color: #0757b5;
+        }
+
+        /* ---------- BOOKING BANNER ---------- */
+        .booking-section {
+            padding: 0 0 65px;
+        }
+
+        .booking-banner {
+            background: linear-gradient(110deg, #e2f2ff, #c6e5ff);
+            border-radius: 18px;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .booking-banner h2 {
+            font-size: 27px;
+            margin: 5px 0 8px;
+        }
+
+        .booking-banner p {
+            color: #526b8b;
+            font-size: 15px;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background-color: #0d2d54;
+            color: white;
+            padding: 35px 0 18px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .footer-logo span {
+            display: block;
+            color: #c5dcf6;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #e0edff;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #63b1ff;
+        }
+
+        .copyright {
+            border-top: 1px solid #365273;
+            margin-top: 25px;
+            padding-top: 18px;
+            text-align: center;
+            color: #c5dcf6;
+            font-size: 12px;
+        }
+
+        /* ---------- RESPONSIVE DESIGN ---------- */
+        @media (max-width: 900px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 15px 0;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .booking-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 22px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .header-btn {
+                padding: 10px 16px;
+            }
+
+            .page-intro {
+                padding: 45px 15px 35px;
+            }
+
+            .page-intro h1 {
+                font-size: 32px;
+            }
+
+            .section-heading h2 {
+                font-size: 25px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card img {
+                height: 220px;
+            }
+
+            .booking-banner {
+                padding: 25px 18px;
+            }
+
+            .booking-banner h2 {
+                font-size: 23px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                BrightSmile
+                <span>Dental Clinic</span>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="dentists.html">Our Dentists</a>
+                <a href="appointment.html">Appointment</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="appointment.html" class="header-btn">
+                Book Appointment
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="page-intro">
+        <div class="container">
+
+            <div class="small-title">Our Services</div>
+
+            <h1>
+                Complete Dental Care for
+                <span>Your Smile</span>
+            </h1>
+
+            <p>
+                We provide professional dental services to help you
+                maintain healthy teeth, beautiful smiles, and
+                excellent oral health.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- SERVICES -->
+    <main>
+        <section class="services-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="small-title">What We Offer</div>
+                    <h2>Our Dental Services</h2>
+                    <p>
+                        Quality care and comfortable treatment for every smile.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <!-- SERVICE 1 -->
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80"
+                            alt="Dental examination and cleaning"
+                        >
+
+                        <div class="card-content">
+                            <span class="service-number">01</span>
+                            <h3>Teeth Cleaning</h3>
+                            <p>
+                                Professional cleaning removes plaque and
+                                tartar to help keep your teeth and gums healthy.
+                            </p>
+                            <a href="appointment.html" class="learn-more">
+                                Book This Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <!-- SERVICE 2 -->
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80"
+                            alt="Dental instruments used for treatment"
+                        >
+
+                        <div class="card-content">
+                            <span class="service-number">02</span>
+                            <h3>Dental Fillings</h3>
+                            <p>
+                                We treat cavities and restore damaged teeth
+                                with appropriate dental filling materials.
+                            </p>
+                            <a href="appointment.html" class="learn-more">
+                                Book This Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <!-- SERVICE 3 -->
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1495926171206-9a7a7f4f8a2d?auto=format&fit=crop&w=800&q=80"
+                            alt="A bright and healthy smile"
+                        >
+
+                        <div class="card-content">
+                            <span class="service-number">03</span>
+                            <h3>Teeth Whitening</h3>
+                            <p>
+                                Improve the appearance of your smile with
+                                professional teeth whitening treatments.
+                            </p>
+                            <a href="appointment.html" class="learn-more">
+                                Book This Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <!-- SERVICE 4 -->
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80"
+                            alt="Dental care and orthodontic treatment"
+                        >
+
+                        <div class="card-content">
+                            <span class="service-number">04</span>
+                            <h3>Orthodontics</h3>
+                            <p>
+                                Dental braces and orthodontic care help
+                                improve tooth alignment and your smile.
+                            </p>
+                            <a href="appointment.html" class="learn-more">
+                                Book This Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <!-- SERVICE 5 -->
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&q=80"
+                            alt="Professional dental treatment"
+                        >
+
+                        <div class="card-content">
+                            <span class="service-number">05</span>
+                            <h3>Tooth Extraction</h3>
+                            <p>
+                                When necessary, a dentist can remove a
+                                damaged or problematic tooth safely.
+                            </p>
+                            <a href="appointment.html" class="learn-more">
+                                Book This Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <!-- SERVICE 6 -->
+                    <article class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80"
+                            alt="Dental checkup for oral health"
+                        >
+
+                        <div class="card-content">
+                            <span class="service-number">06</span>
+                            <h3>Gum Treatment</h3>
+                            <p>
+                                Gum care helps prevent gum disease and
+                                supports healthy teeth and gums.
+                            </p>
+                            <a href="appointment.html" class="learn-more">
+                                Book This Service &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- BOOKING BANNER -->
+        <section class="booking-section">
+            <div class="container">
+
+                <div class="booking-banner">
+
+                    <div>
+                        <div class="small-title">Your Smile Matters</div>
+
+                        <h2>Ready to Book Your Appointment?</h2>
+
+                        <p>
+                            Choose your service and request an appointment
+                            with our dental team.
+                        </p>
+                    </div>
+
+                    <a href="appointment.html" class="btn">
+                        Book Appointment &rarr;
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <a href="index.html" class="footer-logo">
+                    BrightSmile
+                    <span>Dental Clinic</span>
+                </a>
+
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="dentists.html">Our Dentists</a>
+                    <a href="appointment.html">Appointment</a>
+                </div>
+
+                <p>Healthy Smiles, Brighter Futures.</p>
+
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 BrightSmile Dental Clinic.
+                All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
