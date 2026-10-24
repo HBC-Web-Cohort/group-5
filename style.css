@@ -144,3 +144,425 @@ img{display:block;max-width:100%}
 .footer-tooth{display:inline-grid;place-items:center;width:27px;height:27px;
   border-radius:8px;background:#3D2857;color:#E4D3F4;font-size:18px;margin-left:7px}
 @media(max-width:720px){.tooth-art{width:175px;height:190px}.tooth-sparkle svg{width:40px;height:48px}}
+
+
+
+
+/* =========================
+   1. General Settings
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7040A0;
+    --light-purple: #F2EAFB;
+    --white: #FFFFFF;
+    --dark-color: #333333;
+    --gray-color: #666666;
+    --border-color: #E5D9F2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    direction: rtl;
+    background-color: var(--white);
+    color: var(--dark-color);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   2. Header and Navigation
+========================= */
+
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 85px;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    color: var(--gray-color);
+    letter-spacing: 1px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navigation a {
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--primary-color);
+}
+
+.navigation .nav-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 9px 18px;
+    border-radius: 7px;
+}
+
+.navigation .nav-button:hover {
+    background-color: #593080;
+    color: var(--white);
+}
+
+
+/* =========================
+   3. Page Hero
+========================= */
+
+.page-hero {
+    background: linear-gradient(
+        135deg,
+        var(--light-purple),
+        var(--white)
+    );
+
+    padding: 65px 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    color: var(--primary-color);
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    color: var(--gray-color);
+    font-size: 17px;
+}
+
+
+/* =========================
+   4. Section Headings
+========================= */
+
+.doctors-section,
+.appointment-section {
+    padding: 65px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 29px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: var(--gray-color);
+}
+
+
+/* =========================
+   5. Doctors Cards
+========================= */
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.doctor-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(70, 30, 100, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(70, 30, 100, 0.15);
+}
+
+.doctor-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background-color: var(--light-purple);
+}
+
+.doctor-info {
+    padding: 22px;
+    text-align: center;
+}
+
+.doctor-info h3 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.doctor-specialty {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.doctor-info p:not(.doctor-specialty) {
+    color: var(--gray-color);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   6. Buttons
+========================= */
+
+.button {
+    display: inline-block;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #593080;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   7. Appointment Form
+========================= */
+
+.appointment-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(70, 30, 100, 0.08);
+}
+
+.appointment-card h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.form-description {
+    text-align: center;
+    color: var(--gray-color);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--dark-color);
+    background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-message {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-message.success {
+    color: #237A42;
+}
+
+.form-message.error {
+    color: #B42318;
+}
+
+
+/* =========================
+   8. Footer
+========================= */
+
+.footer {
+    background-color: #2E1B40;
+    color: var(--white);
+    padding: 35px 0;
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-bottom: 8px;
+    color: #E8DFF0;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   9. Responsive Design
+========================= */
+
+@media (max-width: 850px) {
+
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .doctors-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-hero h1 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+
+    .doctors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-image {
+        height: 260px;
+    }
+
+    .page-hero {
+        padding: 45px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 25px;
+    }
+
+    .page-hero p {
+        font-size: 15px;
+    }
+
+    .appointment-card {
+        padding: 22px 16px;
+    }
+
+    .appointment-card h2 {
+        font-size: 23px;
+    }
+}
+
+
