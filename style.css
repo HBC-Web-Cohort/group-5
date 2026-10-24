@@ -566,3 +566,164 @@ img {
 }
 
 
+/* ==========================================
+   AMETHYST CLINIC - PREMIUM ANIMATIONS
+   Added effects for the home page
+========================================== */
+
+/* 1. Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. Hero text entrance */
+@keyframes amethystFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-copy .eyebrow {
+    animation: amethystFadeUp 0.7s ease both;
+}
+
+.hero-copy h1 {
+    animation: amethystFadeUp 0.8s ease 0.1s both;
+}
+
+.hero-copy .hero-lead {
+    animation: amethystFadeUp 0.8s ease 0.2s both;
+}
+
+.hero-actions {
+    animation: amethystFadeUp 0.8s ease 0.3s both;
+}
+
+/* 3. Floating hero image */
+.hero-image-frame {
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.hero-image-frame:hover {
+    transform: translateY(-7px) scale(1.015);
+    box-shadow: 0 25px 60px rgba(112, 64, 160, 0.20);
+}
+
+/* 4. Floating cards */
+.floating-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.floating-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(65, 35, 90, 0.14);
+}
+
+/* 5. Gentle floating decoration */
+@keyframes amethystFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.hero-orb {
+    animation: amethystFloat 6s ease-in-out infinite;
+}
+
+.orb-two {
+    animation-delay: 1.5s;
+}
+
+.tooth-sparkle {
+    animation: amethystFloat 4s ease-in-out infinite;
+}
+
+/* 6. Care cards */
+.care-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.care-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(112, 64, 160, 0.13);
+}
+
+/* 7. Featured card highlight */
+.care-card.featured:hover {
+    transform: translateY(-10px);
+}
+
+/* 8. Buttons */
+.button {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(112, 64, 160, 0.22);
+}
+
+/* 9. Navigation links */
+.nav-links a:not(.nav-cta) {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-links a:not(.nav-cta):hover {
+    transform: translateY(-2px);
+}
+
+/* 10. About section artwork */
+.tooth-art {
+    transition: transform 0.5s ease;
+}
+
+.about-art:hover .tooth-art {
+    transform: rotate(-5deg) scale(1.04);
+}
+
+/* 11. Footer links */
+.footer-nav a {
+    transition:
+        color 0.25s ease,
+        padding-right 0.25s ease;
+}
+
+.footer-nav a:hover {
+    padding-right: 6px;
+}
+
+/* 12. Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
