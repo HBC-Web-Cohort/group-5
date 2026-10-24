@@ -11,33 +11,26 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
-  <div class="header-container">
-
-    <a href="index.html" class="logo">
-      <span class="logo-icon">✦</span>
-      <span>
-        <strong>AMETHYST</strong>
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="صفحه اصلی آمتیست">
+      <img src="images/logo-reference.jpg" alt="لوگوی کلینیک دندان‌پزشکی آمتیست">
+      <span class="brand-text">
+        <strong>Amethyst</strong>
         <small>کلینیک دندان‌پزشکی</small>
       </span>
     </a>
 
-    <nav class="main-nav">
-      <a href="index.html">صفحه اصلی</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">معرفی کلینیک</a>
       <a href="services.html">خدمات</a>
       <a href="doctors.html">داکتران</a>
-      <a href="appointment.html">رزرو ویزیت</a>
+      <a class="nav-cta" href="appointment.html">رزرو ویزیت <span>↖</span></a>
     </nav>
-
-    <a href="appointment.html" class="header-btn">
-      نوبت بگیرید
-    </a>
-
   </div>
 </header>
-
-    -->
     <!-- Doctors Section -->
     <main>
 
@@ -173,33 +166,64 @@
     </main>
 
 
-<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="footer-container">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="index.html">
+        <img src="images/logo-reference.jpg" alt="">
+        <span class="brand-text">
+          <strong>Amethyst</strong>
+          <small>کلینیک دندان‌پزشکی</small>
+        </span>
+      </a>
 
-    <div class="footer-about">
-      <h2>AMETHYST</h2>
-      <p>لبخند زیبا، با مراقبت حرفه‌ای از دندان‌های شما.</p>
-    </div>
-
-    <div class="footer-links">
-      <h3>دسترسی سریع</h3>
-      <a href="index.html">صفحه اصلی</a>
-      <a href="services.html">خدمات ما</a>
-      <a href="doctors.html">داکتران ما</a>
-      <a href="appointment.html">رزرو ویزیت</a>
+      <p>
+        <span class="footer-tooth" aria-hidden="true">♧</span>
+        لبخندهای سالم، آینده‌های روشن‌تر.<br>
+        برای هر لبخند، مراقبتی ویژه.
+      </p>
     </div>
 
     <div class="footer-contact">
-      <h3>تماس با ما</h3>
-      <p>تلفن: شماره تماس کلینیک</p>
-      <p>آدرس: آدرس کلینیک</p>
+      <h3>راه‌های تماس</h3>
+
+      <p>
+        <span class="contact-icon">⌖</span>
+        <span><small>آدرس</small>آدرس کلینیک را اینجا وارد کنید</span>
+      </p>
+
+      <p>
+        <span class="contact-icon">@</span>
+        <span>
+          <small>ایمیل</small>
+          <a href="mailto:info@example.com">info@example.com</a>
+        </span>
+      </p>
+
+      <p>
+        <span class="contact-icon">☎</span>
+        <span>
+          <small>شماره تماس</small>
+          <a href="tel:0790387847">0790387847</a> /
+          <a href="tel:0788560231">0788560231</a>
+        </span>
+      </p>
     </div>
 
+    <div class="footer-nav">
+      <h3>دسترسی سریع</h3>
+      <a href="index.html">معرفی کلینیک</a>
+      <a href="services.html">خدمات</a>
+      <a href="doctors.html">داکتران</a>
+      <a href="appointment.html">رزرو ویزیت</a>
+    </div>
   </div>
 
   <div class="footer-bottom">
-    <p>© 2026 Amethyst Dental Clinic | تمامی حقوق محفوظ است.</p>
+    <div class="container">
+      <span>© <span id="currentYear"></span> Amethyst Dental Clinic</span>
+      <span>با مهر برای هر لبخند <b>♡</b></span>
+    </div>
   </div>
 </footer>
     
