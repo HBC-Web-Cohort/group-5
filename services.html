@@ -1,10 +1,18 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | BrightSmile Dental Clinic</title>
+    
+    <!-- ========================================= -->
+    <!-- تغییر نام کلینیک در عنوان صفحه (Tab Title) -->
+    <!-- ========================================= -->
+    <title>خدمات ما | کلینیک دندانپزشکی برایت‌اسمایل</title>
+    
+    <!-- اضافه کردن فونت وزیرمتن -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         /* ---------- GENERAL STYLES ---------- */
@@ -15,9 +23,9 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5faff;
-            color: #7040A0;
+            font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+            background-color: #faf5ff;
+            color: #123568;
             line-height: 1.6;
         }
 
@@ -31,83 +39,15 @@
             margin: auto;
         }
 
-        /* ---------- HEADER ---------- */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 12px rgba(0, 55, 120, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .navbar {
-            min-height: 78px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            color: #0869d9;
-            font-size: 25px;
-            font-weight: bold;
-            white-space: nowrap;
-        }
-
-        .logo span {
-            display: block;
-            color: #17365f;
-            font-size: 13px;
-            font-weight: normal;
-            line-height: 1.2;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #17365f;
-            font-size: 14px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover,
-        nav a.active {
-            color: #0875ed;
-        }
-
-        .header-btn,
-        .btn {
-            display: inline-block;
-            background-color: #7040A0;
-            color: white;
-            padding: 12px 22px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .header-btn:hover,
-        .btn:hover {
-            background-color: #0757b5;
-            transform: translateY(-2px);
-        }
-
         /* ---------- PAGE INTRODUCTION ---------- */
         .page-intro {
             text-align: center;
-            padding: 65px 20px 45px;
-            background: linear-gradient(135deg, #e3f2ff, #ffffff);
+            padding: 80px 20px 60px;
+            background: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 50%, #ffffff 100%);
         }
 
         .small-title {
-            color: #0875ed;
+            color: #9333ea;
             font-size: 13px;
             font-weight: bold;
             letter-spacing: 2px;
@@ -115,18 +55,18 @@
         }
 
         .page-intro h1 {
-            color: #123568;
+            color: #581c87;
             font-size: 42px;
             line-height: 1.2;
             margin: 12px 0;
         }
 
         .page-intro h1 span {
-            color: #0875ed;
+            color: #9333ea;
         }
 
         .page-intro p {
-            color: #526b8b;
+            color: #6b7280;
             max-width: 650px;
             margin: 0 auto;
             font-size: 16px;
@@ -135,6 +75,7 @@
         /* ---------- SERVICES SECTION ---------- */
         .services-section {
             padding: 55px 0 65px;
+            background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
         }
 
         .section-heading {
@@ -145,10 +86,11 @@
         .section-heading h2 {
             font-size: 30px;
             margin: 8px 0;
+            color: #581c87;
         }
 
         .section-heading p {
-            color: #627792;
+            color: #6b7280;
         }
 
         .services-grid {
@@ -159,16 +101,16 @@
 
         .service-card {
             background-color: white;
-            border: 1px solid #e0edfa;
+            border: 1px solid #f3e8ff;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 5px 18px rgba(24, 83, 145, 0.07);
+            box-shadow: 0 5px 18px rgba(147, 51, 234, 0.08);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 25px rgba(24, 83, 145, 0.13);
+            box-shadow: 0 12px 25px rgba(147, 51, 234, 0.15);
         }
 
         .service-card img {
@@ -184,8 +126,8 @@
 
         .service-number {
             display: inline-block;
-            color: #0875ed;
-            background-color: #e8f3ff;
+            color: #9333ea;
+            background-color: #f3e8ff;
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 12px;
@@ -194,118 +136,86 @@
         }
 
         .card-content h3 {
-            color: #123568;
+            color: #581c87;
             font-size: 21px;
             margin-bottom: 10px;
         }
 
         .card-content p {
-            color: #61748c;
+            color: #6b7280;
             font-size: 14px;
             margin-bottom: 18px;
         }
 
         .learn-more {
-            color: #0875ed;
+            color: #9333ea;
             font-size: 14px;
             font-weight: bold;
         }
 
         .learn-more:hover {
-            color: #0757b5;
+            color: #7c3aed;
         }
 
-        /* ---------- BOOKING BANNER ---------- */
+        /* ---------- BOOKING BANNER (با عکس پر شده) ---------- */
         .booking-section {
-            padding: 0 0 65px;
+            padding: 0 0 80px;
         }
 
         .booking-banner {
-            background: linear-gradient(110deg, #e2f2ff, #c6e5ff);
-            border-radius: 18px;
-            padding: 35px;
+            background: linear-gradient(110deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-radius: 24px;
+            padding: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 25px;
+            gap: 30px;
+            border: 1px solid #e9d5ff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .booking-text {
+            flex: 1;
+            z-index: 2;
         }
 
         .booking-banner h2 {
-            font-size: 27px;
+            font-size: 28px;
             margin: 5px 0 8px;
+            color: #581c87;
         }
 
         .booking-banner p {
-            color: #526b8b;
+            color: #6b7280;
             font-size: 15px;
+            margin-bottom: 20px;
         }
 
-        /* ---------- FOOTER ---------- */
-        footer {
-            background-color: #0d2d54;
-            color: white;
-            padding: 35px 0 18px;
-        }
-
-        .footer-content {
+        /* عکس جدید برای پر کردن فضای بنر */
+        .booking-image {
+            flex: 1;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            gap: 25px;
-            flex-wrap: wrap;
+            z-index: 2;
         }
 
-        .footer-logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: white;
+        .booking-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.2);
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
         }
 
-        .footer-logo span {
-            display: block;
-            color: #c5dcf6;
-            font-size: 13px;
-            font-weight: normal;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #e0edff;
-            font-size: 14px;
-        }
-
-        .footer-links a:hover {
-            color: #63b1ff;
-        }
-
-        .copyright {
-            border-top: 1px solid #365273;
-            margin-top: 25px;
-            padding-top: 18px;
-            text-align: center;
-            color: #c5dcf6;
-            font-size: 12px;
+        .booking-image img:hover {
+            transform: rotate(0deg) scale(1.02);
         }
 
         /* ---------- RESPONSIVE DESIGN ---------- */
         @media (max-width: 900px) {
-            .navbar {
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 15px 0;
-            }
-
-            nav {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -314,35 +224,24 @@
                 flex-direction: column;
                 text-align: center;
             }
+            
+            .booking-image img {
+                max-width: 80%;
+                transform: rotate(0deg);
+            }
         }
 
         @media (max-width: 600px) {
-            .logo {
-                font-size: 22px;
-            }
-
-            nav {
-                gap: 12px;
-            }
-
-            nav a {
-                font-size: 12px;
-            }
-
-            .header-btn {
-                padding: 10px 16px;
-            }
-
             .page-intro {
-                padding: 45px 15px 35px;
+                padding: 60px 15px 40px;
             }
 
             .page-intro h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
 
             .section-heading h2 {
-                font-size: 25px;
+                font-size: 24px;
             }
 
             .services-grid {
@@ -358,16 +257,7 @@
             }
 
             .booking-banner h2 {
-                font-size: 23px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-links {
-                justify-content: center;
+                font-size: 22px;
             }
         }
     </style>
@@ -375,46 +265,20 @@
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container navbar">
-
-            <a href="index.html" class="logo">
-                BrightSmile
-                <span>Dental Clinic</span>
-            </a>
-
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="services.html" class="active">Services</a>
-                <a href="dentists.html">Our Dentists</a>
-                <a href="appointment.html">Appointment</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-            <a href="appointment.html" class="header-btn">
-                Book Appointment
-            </a>
-
-        </div>
-    </header>
-
-
     <!-- PAGE INTRODUCTION -->
     <section class="page-intro">
         <div class="container">
 
-            <div class="small-title">Our Services</div>
+            <div class="small-title">خدمات ما</div>
 
             <h1>
-                Complete Dental Care for
-                <span>Your Smile</span>
+                مراقبت کامل دندانپزشکی برای
+                <span>لبخند شما</span>
             </h1>
 
             <p>
-                We provide professional dental services to help you
-                maintain healthy teeth, beautiful smiles, and
-                excellent oral health.
+                ما خدمات دندانپزشکی حرفه‌ای ارائه می‌دهیم تا به شما در حفظ دندان‌های سالم،
+                لبخندهای زیبا و سلامت عالی دهان و دندان کمک کنیم.
             </p>
 
         </div>
@@ -427,10 +291,10 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <div class="small-title">What We Offer</div>
-                    <h2>Our Dental Services</h2>
+                    <div class="small-title">آنچه ارائه می‌دهیم</div>
+                    <h2>خدمات دندانپزشکی ما</h2>
                     <p>
-                        Quality care and comfortable treatment for every smile.
+                        مراقبت باکیفیت و درمان راحت برای هر لبخند.
                     </p>
                 </div>
 
@@ -438,126 +302,103 @@
 
                     <!-- SERVICE 1 -->
                     <article class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80"
-                            alt="Dental examination and cleaning"
-                        >
-
+                        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80" alt="جرم‌گیری دندان">
                         <div class="card-content">
                             <span class="service-number">01</span>
-                            <h3>Teeth Cleaning</h3>
-                            <p>
-                                Professional cleaning removes plaque and
-                                tartar to help keep your teeth and gums healthy.
-                            </p>
-                            <a href="appointment.html" class="learn-more">
-                                Book This Service &rarr;
-                            </a>
+                            <h3>جرم‌گیری دندان</h3>
+                            <p>تمیز کردن حرفه‌ای پلاک و جرم دندان به حفظ سلامت دندان‌ها و لثه‌های شما کمک می‌کند.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
-
 
                     <!-- SERVICE 2 -->
                     <article class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80"
-                            alt="Dental instruments used for treatment"
-                        >
-
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="پر کردن دندان">
                         <div class="card-content">
                             <span class="service-number">02</span>
-                            <h3>Dental Fillings</h3>
-                            <p>
-                                We treat cavities and restore damaged teeth
-                                with appropriate dental filling materials.
-                            </p>
-                            <a href="appointment.html" class="learn-more">
-                                Book This Service &rarr;
-                            </a>
+                            <h3>پر کردن دندان</h3>
+                            <p>ما پوسیدگی‌ها را درمان کرده و دندان‌های آسیب‌دیده را با مواد پرکننده همرنگ دندان ترمیم می‌کنیم.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
 
-
-                    <!-- SERVICE 3 -->
+                    <!-- SERVICE 3 - Teeth Whitening with NEW IMAGE -->
                     <article class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1495926171206-9a7a7f4f8a2d?auto=format&fit=crop&w=800&q=80"
-                            alt="A bright and healthy smile"
-                        >
-
+                        <!-- ========================================= -->
+                        <!-- عکس جدید برای سفید کردن دندان -->
+                        <!-- ========================================= -->
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="سفید کردن دندان">
                         <div class="card-content">
                             <span class="service-number">03</span>
-                            <h3>Teeth Whitening</h3>
-                            <p>
-                                Improve the appearance of your smile with
-                                professional teeth whitening treatments.
-                            </p>
-                            <a href="appointment.html" class="learn-more">
-                                Book This Service &rarr;
-                            </a>
+                            <h3>سفید کردن دندان</h3>
+                            <p>ظاهر لبخند خود را با درمان‌های حرفه‌ای و ایمن سفید کردن دندان در کلینیک بهبود بخشید.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
-
 
                     <!-- SERVICE 4 -->
                     <article class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80"
-                            alt="Dental care and orthodontic treatment"
-                        >
-
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="ارتودنسی">
                         <div class="card-content">
                             <span class="service-number">04</span>
-                            <h3>Orthodontics</h3>
-                            <p>
-                                Dental braces and orthodontic care help
-                                improve tooth alignment and your smile.
-                            </p>
-                            <a href="appointment.html" class="learn-more">
-                                Book This Service &rarr;
-                            </a>
+                            <h3>ارتودنسی</h3>
+                            <p>براکت‌های دندان و مراقبت‌های ارتودنسی به بهبود تراز دندان‌ها و زیبایی لبخند شما کمک می‌کنند.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
-
 
                     <!-- SERVICE 5 -->
                     <article class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&q=80"
-                            alt="Professional dental treatment"
-                        >
-
+                        <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&q=80" alt="کشیدن دندان">
                         <div class="card-content">
                             <span class="service-number">05</span>
-                            <h3>Tooth Extraction</h3>
-                            <p>
-                                When necessary, a dentist can remove a
-                                damaged or problematic tooth safely.
-                            </p>
-                            <a href="appointment.html" class="learn-more">
-                                Book This Service &rarr;
-                            </a>
+                            <h3>کشیدن دندان</h3>
+                            <p>در صورت نیاز، دندانپزشک ما دندان آسیب‌دیده یا عقل را با بی‌حسی کامل و به‌طور ایمن خارج می‌کند.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
-
 
                     <!-- SERVICE 6 -->
                     <article class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80"
-                            alt="Dental checkup for oral health"
-                        >
-
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="درمان لثه">
                         <div class="card-content">
                             <span class="service-number">06</span>
-                            <h3>Gum Treatment</h3>
-                            <p>
-                                Gum care helps prevent gum disease and
-                                supports healthy teeth and gums.
-                            </p>
-                            <a href="appointment.html" class="learn-more">
-                                Book This Service &rarr;
-                            </a>
+                            <h3>درمان لثه</h3>
+                            <p>مراقبت تخصصی از لثه به پیشگیری از بیماری‌های پریودنتال و پشتیبانی از سلامت کلی دهان کمک می‌کند.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
+                        </div>
+                    </article>
+
+                    <!-- SERVICE 7 (جدید) -->
+                    <article class="service-card">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="عصب‌کشی دندان">
+                        <div class="card-content">
+                            <span class="service-number">07</span>
+                            <h3>عصب‌کشی (اندو)</h3>
+                            <p>درمان ریشه دندان با تجهیزات پیشرفته برای نجات دندان‌های آسیب‌دیده و حذف درد و عفونت.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
+                        </div>
+                    </article>
+
+                    <!-- SERVICE 8 (جدید) -->
+                    <article class="service-card">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="ایمپلنت دندان">
+                        <div class="card-content">
+                            <span class="service-number">08</span>
+                            <h3>ایمپلنت دندان</h3>
+                            <p>جایگزینی دائمی و طبیعی برای دندان‌های از دست رفته با استفاده از بهترین برندهای ایمپلنت جهانی.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
+                        </div>
+                    </article>
+
+                    <!-- SERVICE 9 (جدید) -->
+                    <article class="service-card">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="دندانپزشکی کودکان">
+                        <div class="card-content">
+                            <span class="service-number">09</span>
+                            <h3>دندانپزشکی کودکان</h3>
+                            <p>محیطی شاد و بدون استرس برای معاینه، فلورایدتراپی و درمان دندان‌های شیری و دائمی کودکان.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
 
@@ -566,63 +407,32 @@
         </section>
 
 
-        <!-- BOOKING BANNER -->
+        <!-- BOOKING BANNER (با عکس پر شده) -->
         <section class="booking-section">
             <div class="container">
-
                 <div class="booking-banner">
 
-                    <div>
-                        <div class="small-title">Your Smile Matters</div>
-
-                        <h2>Ready to Book Your Appointment?</h2>
-
+                    <div class="booking-text">
+                        <div class="small-title">لبخند شما مهم است</div>
+                        <h2>آماده رزرو نوبت هستید؟</h2>
                         <p>
-                            Choose your service and request an appointment
-                            with our dental team.
+                            خدمت مورد نظر خود را انتخاب کنید و همین حالا با تیم متخصص ما 
+                            نوبت رزرو کنید. ما برای دیدن لبخند سالم شما لحظه‌شماری می‌کنیم.
                         </p>
+                        <a href="appointment.html" class="btn">
+                            رزرو نوبت آنلاین &larr;
+                        </a>
                     </div>
 
-                    <a href="appointment.html" class="btn">
-                        Book Appointment &rarr;
-                    </a>
+                    <!-- عکس اضافه شده برای پر کردن فضای خالی بنر -->
+                    <div class="booking-image">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="تیم دندانپزشکی آماده خدمت‌رسانی">
+                    </div>
 
                 </div>
-
             </div>
         </section>
     </main>
-
-
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="container">
-
-            <div class="footer-content">
-
-                <a href="index.html" class="footer-logo">
-                    BrightSmile
-                    <span>Dental Clinic</span>
-                </a>
-
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="dentists.html">Our Dentists</a>
-                    <a href="appointment.html">Appointment</a>
-                </div>
-
-                <p>Healthy Smiles, Brighter Futures.</p>
-
-            </div>
-
-            <div class="copyright">
-                &copy; 2026 BrightSmile Dental Clinic.
-                All rights reserved.
-            </div>
-
-        </div>
-    </footer>
-
+    <Script src="services.js"></Script>
 </body>
 </html>
