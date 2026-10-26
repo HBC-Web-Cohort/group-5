@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ========================================= -->
-    <!-- تغییر نام کلینیک در عنوان صفحه (Tab Title) -->
-    <!-- ========================================= -->
+    
     <title>خدمات ما | کلینیک دندانپزشکی آمیتست</title>
     
     <!-- اضافه کردن فونت وزیرمتن -->
@@ -15,6 +13,288 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
+        /* Header and Footer — Original Amethyst styles */
+
+:root {
+  --purple: #633A91;
+  --purple-deep: #38205D;
+  --purple-dark: #2D194D;
+  --lilac: #F1E9F8;
+  --lilac-2: #E5D6F0;
+  --ink: #2D2436;
+  --muted: #766B81;
+  --white: #fff;
+  --line: #E9E0F0;
+  --shadow: 0 20px 55px rgba(65,37,91,.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  height: 88px;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(99,58,145,.09);
+}
+
+.nav-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: max-content;
+}
+
+.brand img {
+  width: 57px;
+  height: 57px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.brand-text strong {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  color: var(--purple);
+  letter-spacing: .2px;
+}
+
+.brand-text small {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links .nav-cta {
+  background: var(--purple);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 9px;
+  box-shadow: 0 7px 18px rgba(99,58,145,.18);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: var(--lilac);
+  color: var(--purple);
+  font-size: 24px;
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+  background: #281641;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr .7fr;
+  gap: 55px;
+  padding-bottom: 38px;
+}
+
+.brand-footer img {
+  width: 49px;
+  height: 49px;
+  filter: brightness(1.05);
+  background: #fff;
+}
+
+.brand-footer .brand-text strong {
+  color: #E4D3F4;
+}
+
+.brand-footer .brand-text small {
+  color: #C9B9D8;
+}
+
+.footer-brand > p {
+  color: #C9BCD6;
+  font-size: 12px;
+  margin-top: 17px;
+  line-height: 2.2;
+}
+
+.site-footer h3 {
+  font-size: 14px;
+  margin-bottom: 19px;
+  color: #F1E7FA;
+}
+
+.footer-contact > p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 13px 0;
+  color: #D6C9E1;
+  font-size: 12px;
+}
+
+.footer-contact > p > span:last-child {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact small {
+  font-size: 10px;
+  color: #AFA0C1;
+}
+
+.contact-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #3D2857;
+  color: #E5D2F5;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.footer-nav a {
+  display: block;
+  font-size: 12px;
+  color: #C9BCD6;
+  margin: 9px 0;
+  transition: .2s;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #49345E;
+  padding: 15px 0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #AFA0C1;
+  font-size: 10px;
+}
+
+.footer-bottom b {
+  color: #D9BCEB;
+  margin-right: 5px;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .site-header {
+    height: 75px;
+  }
+
+  .brand img {
+    width: 47px;
+    height: 47px;
+  }
+
+  .brand-text strong {
+    font-size: 19px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    padding: 20px 5%;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 15px 25px rgba(50,25,70,.08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links > a {
+    padding: 5px 0;
+  }
+
+  .nav-links .nav-cta {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}
+
+
+
+
         /* ---------- GENERAL STYLES ---------- */
         * {
             margin: 0;
@@ -47,8 +327,8 @@
         }
 
         .small-title {
-            color: #9333ea;
-            font-size: 13px;
+            color: #9854d8;
+            font-size: 25px;
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -157,7 +437,7 @@
             color: #7c3aed;
         }
 
-        /* ---------- BOOKING BANNER (با عکس پر شده) ---------- */
+        /* ---------- BOOKING BANNER ---------- */
         .booking-section {
             padding: 0 0 80px;
         }
@@ -192,7 +472,7 @@
             margin-bottom: 20px;
         }
 
-        /* عکس جدید برای پر کردن فضای بنر */
+        
         .booking-image {
             flex: 1;
             display: flex;
@@ -264,6 +544,27 @@
 </head>
 
 <body>
+    <!--Header-->
+    <header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="صفحه اصلی آمتیست">
+      <img src="images/logo-reference.jpg" alt="لوگوی کلینیک دندان‌پزشکی آمتیست">
+      <span class="brand-text">
+        <strong>Amethyst</strong>
+        <small>کلینیک دندان‌پزشکی</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">معرفی کلینیک</a>
+      <a href="services.html">خدمات</a>
+      <a href="doctors.html">داکتران</a>
+      <a class="nav-cta" href="appointment.html">رزرو ویزیت <span>↖</span></a>
+    </nav>
+  </div>
+</header>
 
     <!-- PAGE INTRODUCTION -->
     <section class="page-intro">
@@ -292,10 +593,6 @@
 
                 <div class="section-heading">
                     <div class="small-title">آنچه ارائه می‌دهیم</div>
-                    <h2>خدمات دندانپزشکی ما</h2>
-                    <p>
-                        مراقبت باکیفیت و درمان راحت برای هر لبخند.
-                    </p>
                 </div>
 
                 <div class="services-grid">
@@ -322,11 +619,8 @@
                         </div>
                     </article>
 
-                    <!-- SERVICE 3 - Teeth Whitening with NEW IMAGE -->
+                    <!-- SERVICE 3 -->
                     <article class="service-card">
-                        <!-- ========================================= -->
-                        <!-- عکس جدید برای سفید کردن دندان -->
-                        <!-- ========================================= -->
                         <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="سفید کردن دندان">
                         <div class="card-content">
                             <span class="service-number">03</span>
@@ -342,7 +636,7 @@
                         <div class="card-content">
                             <span class="service-number">04</span>
                             <h3>ارتودنسی</h3>
-                            <p>براکت‌های دندان و مراقبت‌های ارتودنسی به بهبود تراز دندان‌ها و زیبایی لبخند شما کمک می‌کنند.</p>
+                            <p>براکت‌های دندان و مراقبت‌های ارتودنسی به بهبود دندان‌ها و زیبایی لبخند شما کمک می‌کنند.</p>
                             <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
@@ -369,7 +663,7 @@
                         </div>
                     </article>
 
-                    <!-- SERVICE 7 (جدید) -->
+                    <!-- SERVICE 7 -->
                     <article class="service-card">
                         <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="عصب‌کشی دندان">
                         <div class="card-content">
@@ -380,7 +674,7 @@
                         </div>
                     </article>
 
-                    <!-- SERVICE 8 (جدید) -->
+                    <!-- SERVICE 8 -->
                     <article class="service-card">
                         <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="ایمپلنت دندان">
                         <div class="card-content">
@@ -391,13 +685,24 @@
                         </div>
                     </article>
 
-                    <!-- SERVICE 9 (جدید) -->
+                    <!-- SERVICE 9 -->
                     <article class="service-card">
-                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="دندانپزشکی کودکان">
+                        <img src="image/imgdownloader-30e2da6f.webp" alt="دندانپزشکی کودکان">
                         <div class="card-content">
                             <span class="service-number">09</span>
                             <h3>دندانپزشکی کودکان</h3>
                             <p>محیطی شاد و بدون استرس برای معاینه، فلورایدتراپی و درمان دندان‌های شیری و دائمی کودکان.</p>
+                            <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
+                        </div>
+                    </article>
+
+                     <!-- SERVICE 10 -->
+                    <article class="service-card">
+                        <img src="image/imgdownloader-48c49509.jpeg" alt="معاینه دندان">
+                        <div class="card-content">
+                            <span class="service-number">10</span>
+                            <h3>معاینه دندان</h3>
+                            <p>معاینه دندان به صورت حرفه‌ایی و مشوره دهی دقیق با کادر حرفه ایی.
                             <a href="appointment.html" class="learn-more">رزرو این خدمت &larr;</a>
                         </div>
                     </article>
@@ -407,7 +712,7 @@
         </section>
 
 
-        <!-- BOOKING BANNER (با عکس پر شده) -->
+        <!-- BOOKING BANNER -->
         <section class="booking-section">
             <div class="container">
                 <div class="booking-banner">
@@ -424,7 +729,6 @@
                         </a>
                     </div>
 
-                    <!-- عکس اضافه شده برای پر کردن فضای خالی بنر -->
                     <div class="booking-image">
                         <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="تیم دندانپزشکی آماده خدمت‌رسانی">
                     </div>
@@ -433,6 +737,67 @@
             </div>
         </section>
     </main>
+    <!--Footer-->
+    <footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="index.html">
+        <img src="images/logo-reference.jpg" alt="">
+        <span class="brand-text">
+          <strong>Amethyst</strong>
+          <small>کلینیک دندان‌پزشکی</small>
+        </span>
+      </a>
+
+      <p>
+        <span class="footer-tooth" aria-hidden="true">♧</span>
+        لبخندهای سالم، آینده‌های روشن‌تر.<br>
+        برای هر لبخند، مراقبتی ویژه.
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>راه‌های تماس</h3>
+
+      <p>
+        <span class="contact-icon">⌖</span>
+        <span><small>آدرس</small>آدرس کلینیک را اینجا وارد کنید</span>
+      </p>
+
+      <p>
+        <span class="contact-icon">@</span>
+        <span>
+          <small>ایمیل</small>
+          <a href="mailto:info@example.com">info@example.com</a>
+        </span>
+      </p>
+
+      <p>
+        <span class="contact-icon">☎</span>
+        <span>
+          <small>شماره تماس</small>
+          <a href="tel:0790387847">0790387847</a> /
+          <a href="tel:0788560231">0788560231</a>
+        </span>
+      </p>
+    </div>
+
+    <div class="footer-nav">
+      <h3>دسترسی سریع</h3>
+      <a href="index.html">معرفی کلینیک</a>
+      <a href="services.html">خدمات</a>
+      <a href="doctors.html">داکتران</a>
+      <a href="appointment.html">رزرو ویزیت</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© <span id="currentYear"></span> Amethyst Dental Clinic</span>
+      <span>با مهر برای هر لبخند <b>♡</b></span>
+    </div>
+  </div>
+</footer>
     <Script src="services.js"></Script>
 </body>
 </html>
